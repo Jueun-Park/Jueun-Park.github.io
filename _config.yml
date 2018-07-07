@@ -1,0 +1,29 @@
+# Site settings
+title:          Jueun Park
+description:    "Simple pages for posting"
+
+url:            "https://chesterhow.github.io"
+
+# Author
+author:
+  name:         Jueun Park
+  url:          https://jueun-park.github.io
+  email:        jueun.park@skku.edu
+
+# Build settings
+markdown:       kramdown
+
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        compressed
+
+# Gems
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  # - jemoji #Uncomment this to allow emoji in your post
+
+# Permalinks
+permalink:      /:year-:month-:day/:title
+paginate:       5
