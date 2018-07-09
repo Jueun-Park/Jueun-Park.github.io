@@ -15,4 +15,4 @@ permalink: /about/
 
 [github](https://github.com/Jueun-Park)
 
-[facebook](www.facebook.com/elpion19)
+[facebook](https://www.facebook.com/elpion19)
