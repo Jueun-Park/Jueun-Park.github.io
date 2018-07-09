@@ -447,3 +447,5 @@ PM은 Project Manager로 프로젝트 일정 관리, 팀 내 소통, (메일 주
 
 
 [**HEVEN_AutonomousCar_2018** Project Repository](https://github.com/Jueun-Park/HEVEN_AutonomousCar_2018)
+
+[자율주행 시스템의 요구사항과 프로그램 구조 비교](https://jueun-park.github.io/2018-07-09/requirement_and_structure_of_autonomous_driving_system): 대회가 끝나고 난 뒤 프로그램 구조 측면에서 아쉬운 점을 정리한 글
