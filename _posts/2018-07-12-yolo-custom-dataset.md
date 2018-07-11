@@ -68,3 +68,11 @@ darknet은 Yolo 개발자가 제공하는 프레임워크로, 이미 구현된 Y
 * 원래 오래 걸리거나...
 
 일단은 기다려 보고 있다. 시간이 되는 한에서 여러 설정값으로 학습시켜 볼 생각이다.
+
+
+
+# 참고해볼 한국어 자료
+
+[[YOLOv2]](https://kimbom.co.kr/yolov2/)
+
+[YOLOv2 와 YOLO9000](https://m.blog.naver.com/PostView.nhn?blogId=sogangori&logNo=221011203855&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
