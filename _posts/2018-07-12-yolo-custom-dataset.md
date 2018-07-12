@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 커스텀 데이터 셋으로 Yolo 써 보기
+title: 커스텀 데이터 셋으로 Yolo 써 보기 1
 published: True
 ---
 
@@ -69,7 +69,7 @@ darknet은 Yolo 개발자가 제공하는 프레임워크로, 이미 구현된 Y
 
 일단은 기다려 보고 있다. 시간이 되는 한에서 여러 설정값으로 학습시켜 볼 생각이다.
 
-
+추가: [2편](https://jueun-park.github.io/2018-07-12/yolo-custom-dataset-2)을 작성했다.
 
 # 참고해볼 한국어 자료
 
