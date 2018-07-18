@@ -16,3 +16,5 @@ permalink: /about/
 [github](https://github.com/Jueun-Park)
 
 [facebook](https://www.facebook.com/elpion19)
+
+[curriculum vitae]({{ "/cv/index.html" | absolute_url }})
