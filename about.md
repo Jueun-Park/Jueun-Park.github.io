@@ -17,4 +17,4 @@ permalink: /about/
 
 [facebook](https://www.facebook.com/elpion19)
 
-[curriculum vitae]({{ "/cv/index.html" | absolute_url }})
+[curriculum vitae]({{ "/cv/" | absolute_url }})
