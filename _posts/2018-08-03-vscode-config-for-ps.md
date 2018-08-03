@@ -1,6 +1,6 @@
 ---
 layout: post
-title: C언어 문제풀이를 위한 vscode 설정 기록
+title: C언어 문제풀이를 위한 VS Code 설정 기록
 published: True
 ---
 
@@ -15,7 +15,9 @@ VS Code를 사용해보려고 한다. 백준 등 온라인 저지 문제를 풀�
 5. `ctrl+f5`로 디버깅 없이 실행
 6. `f5`로 gdb를 이용해 디버깅
 
-그리고 이 글은 다른 사람들한테도 써 보라고 하려고 작성했다.
+
+
+그리고 이 글은 처음엔 미래의 내가 설정 방법을 까먹을 것을 대비해서 작성했는데, 쓰다 보니 다른 사람들한테도 써 보라고 하려고 작성한 것처럼 되었다.
 
 
 
@@ -52,11 +54,11 @@ int main() {
 
 # 빌드 작업 구성
 
-다 작성했으면 빌드해야 한다. 작성한 코드 창에서 `ctrl+shift+b`를 누른다. 바로 빌드될 것이라는 생각과는 달리 뭐가 없다고 한다. 새로 뜬 `빌드 작업 구성` 버튼을 눌러본다.
+다 작성했으면 빌드해야 한다. 작성한 코드 창에서 `ctrl+shift+b`를 누른다. 바로 빌드될 것이라는 생각과는 달리 뭐가 없다고 한다. 새로 뜬 `빌드 작업 구성` 버튼을 눌러본다. `템플릿에서 tasks.json 만들기` - `Others` 를 선택해 `./.vscode/tasks.json`을 만든다.
 
 ## `tasks.json` 
 
-`템플릿에서 tasks.json 만들기` - `Others` 를 선택해 `./.vscode/tasks.json`을 만든다. 나는 여러 가지 삽질을 통해 다음과 같은 설정 코드를 쓰기로 했다. [이 블로그의 글](http://webnautes.tistory.com/1158)과 [공식 문서](https://code.visualstudio.com/Docs/editor/tasks#_typescript-hello-world)를 가장 많이 참고했다.
+나는 여러 가지 삽질을 통해 다음과 같은 설정 코드를 쓰기로 했다. [이 블로그의 글](http://webnautes.tistory.com/1158)과 [공식 문서](https://code.visualstudio.com/Docs/editor/tasks#_typescript-hello-world)를 가장 많이 참고했다.
 
 ```json
 {
@@ -72,7 +74,7 @@ int main() {
             "command": "gcc",
             "args": [
                 "${file}",
-                "-g",  // debug option, 디버깅 안 할 거라면 없애도 된다(빌드된 파일의 용량이 작아짐)
+                "-g",  // debug option, 디버깅 안 할 거라면 없애도 된다(실행파일 용량이 작아짐)
                 "-o",
                 // 해당 디렉토리 내에 bin 디렉토리를 미리 생성해주어야 한다
                 "${fileDirname}\\bin\\${fileBasenameNoExtension}"
@@ -120,7 +122,7 @@ int main() {
 
 # 단축키 덮어쓰기
 
-이제 `ctrl+shift+b`를 누르면 빌드 작업이 실행된다. 위 코드에서 group의 이름이 build인 부분만이 실행되는 것이다. 그럼 테스트 작업은 어떻게 실행하느냐? 키 바인딩을 수정해야 한다. `파일-기본 설정-바로 가기 키` 를 들어간다. 그럼 `keybindings.json` 파일을 수정할 수 있다는 안내가 나오고 누르면 해당 파일이 열린다. 다음과 같이 수정한다.
+이제 `ctrl+shift+b`를 누르면 빌드 작업이 실행된다. 위 코드에서 `"group"`의 이름이 `"build"`인 부분만이 실행되는 것이다. 그럼 `"test"` 작업은 어떻게 실행하느냐? 내가 원하는 단축키를 골라 키 바인딩을 수정해야 한다. 나는 `ctrl+f5`를 쓰고 싶었다. `파일-기본 설정-바로 가기 키` 를 들어간다. 그럼 `keybindings.json` 파일을 수정할 수 있다는 안내가 나오고 누르면 해당 파일이 열린다. 다음과 같이 수정한다.
 
 ```json
 // Place your key bindings in this file to overwrite the defaults
@@ -135,28 +137,36 @@ int main() {
 사실 원래 vscode의 Default Keybindings에는 이렇게 되어 있다. 이것을 덮어 쓰는 것이다... ~~왜냐하면 나는 이 커맨드에 대응하는 작업을 설정하는 법을 못 찾았기 때문이다~~
 
 ```json
-{ "key": "ctrl+f5",               "command": "workbench.action.debug.run",
-                                     "when": "!inDebugMode" },
+{ "key": "ctrl+f5",
+  "command": "workbench.action.debug.run",
+  "when": "!inDebugMode" },
 ```
 
-이제 `ctrl+f5`를 누르면 빌드된 프로그램이 실행될 것이다.
+
+
+## 코드 실행
+
+이제 `ctrl+shift+b`를 눌러 빌드하고, `ctrl+f5`를 누르면 빌드된 프로그램이 실행될 것이다.
 
 
 
 # 디버깅
 
-디버깅 모드가 실행되는지 보기 위해 `return 0;`에 종단점을 찍고 `f5`를 눌러 본다. 역시 뭐가 없는지 환경을 설정하라고 한다. `C++ (GDB/LLDB)`를 선택한다. 참고로 `f5` 키는 다음과 같이 바인딩 되어 있다.
+디버깅 모드가 실행되는지 보기 위해 예제 코드의 `return 0;`에 중단점~~빨간콩~~을 찍고 `f5`를 눌러 본다. 역시 뭐가 없는지 환경을 설정하라고 한다. `C++ (GDB/LLDB)`를 선택한다. 새 json 파일이 생성되었다.
+
+참고로 `f5` 키는 다음과 같이 바인딩 되어 있다.
 
 ```json
-{ "key": "f5",                    "command": "workbench.action.debug.start",
-                                     "when": "!inDebugMode" },
+{ "key": "f5",
+  "command": "workbench.action.debug.start",
+  "when": "!inDebugMode" },
 ```
 
-새 json 파일이 생성되었다.
+
 
 ## `launch.json`
 
-주어진 템플릿의
+새로 생긴 `launch.json` 파일을 보자. 주어진 템플릿의,
 
 ```
 "program": "enter program name, for example ${workspaceFolder}/a.exe",
@@ -174,14 +184,26 @@ int main() {
 
 이제 `f5` 를 누르면 디버깅이 시작된다. `f5`를 누를 때마다 다음 종단점으로 넘어간다.
 
+## 주의할 점
+
+gcc 컴파일 시 `-g` 옵션을 넣어 주어야 디버깅 시 필요한 정보를 포함하여 빌드된다. 위의 `tasks.json` 코드에서 그 부분을 확인할 수 있다.
+
 
 
 # 그 외
 
 #### 테마
 
-`파일-기본 설정-색 테마` 에서 색 테마를 바꿀 수 있다. 글꼴은 기본 설정도 한글이 괜찮게 나와서 특별히 바꾸지 않았다...
+`파일-기본 설정-색 테마` 에서 색 테마를 바꿀 수 있다. 개인적으로 monokai가 아름답다고 생각한다. 글꼴은 기본 설정도 한글이 괜찮게 나와서 특별히 바꾸지 않았다...
 
 #### 확장 프로그램
 
-확장 프로그램이 아주 많다고 한다. 사용하다가 '이런 기능 없나?'하는 생각이 들 때마다 받아서 사용해 볼 생각이다.
+확장 프로그램이 아주 많다고 한다. 사용하다가 '이런 기능 없나?'하는 생각이 들 때마다 받아서 사용해 볼 생각이다. 마치 뷔페 같다. ~~당신이 뷔페를 좋아한다면 vscode도 좋아하게 될 것이다~~
+
+#### 서브라임 텍스트와의 관계?
+
+가볍고 확장 프로그램으로 기능을 추가하며 사용한다는 점이 비슷하다는데, 둘 다 깊게 사용해보지 않아서 차이가 어떤지 알지 못한다. (누가 알려주셨으면...) 내가 느끼기에 서브라임 텍스트3은 예전에 처음 깔았을 때 디렉토리 탐색기가 붙어 있지 않아서 검정 메모장(...) 같다고 생각했었다.
+
+#### 다른 언어
+
+Python 개발 환경도 vscode로 구성할 수 있다고 하는데, 묵직한 Pycharm이 조금 더 마음에 안 드는 날이 오면 한 번 시도해볼지도 모르겠다.
