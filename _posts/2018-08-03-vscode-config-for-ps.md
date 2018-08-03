@@ -35,7 +35,7 @@ gcc를 사용하기 위해 설치한다. [MinGW](http://www.mingw.org/) 홈페�
 
 # 작업 디렉토리 만들기
 
-나는 `problem-solving-practices` 디렉토리를 만들었다. VS Code를 실행한 뒤 `파일-폴더 열기`를 통해 해당 폴더를 연다. 그 안에 예제로 `1000.c` 파일을 만들었다. 다음이 [boj 1000번](https://www.acmicpc.net/problem/1000) 예제 코드이다.
+나는 `problem-solving-practices` 디렉토리를 만들었다. VS Code를 실행한 뒤 `파일 - 폴더 열기`를 통해 해당 폴더를 연다. 그 안에 예제로 `1000.c` 파일을 만들었다. 다음이 [boj 1000번](https://www.acmicpc.net/problem/1000) 예제 코드이다.
 
 ```c
 #include <stdio.h>
