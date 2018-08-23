@@ -11,7 +11,7 @@ permalink: /cv/
 * 학부: 시스템경영공학과 / 컴퓨터공학과 (복수전공)
     * System Management Engineering / Computer Science and Engineering (double major)
     * 2019.08 졸업 예정
-* GPA: 3.54 (/ 4.5)
+* 현재까지의 GPA: 3.54 (/ 4.5)
 
 
 
@@ -50,6 +50,12 @@ permalink: /cv/
 * 응용통계및연습1
 * 경영과학(OR) 및 실습1
 * 성격과 적응 (심리학 교양)
+
+
+
+## 성적이 C+이지만 재미있다고 생각한 과목
+
+* 응용통계및연습2
 
 
 
