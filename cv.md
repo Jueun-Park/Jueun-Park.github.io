@@ -5,17 +5,29 @@ author: "Jueun Park"
 permalink: /cv/
 ---
 
-(last update: 2018-07-18)
+(last update: 2018-09-05)
 
 # 기본 정보
 * 학부: 시스템경영공학과 / 컴퓨터공학과 (복수전공)
     * System Management Engineering / Computer Science and Engineering (double major)
     * 2019.08 졸업 예정
-* 현재까지의 GPA: 3.54 (/ 4.5)
+* 현재까지의 GPA: 3.54 / 4.5
+    * SME: 3.64 / 4.5
+    * CSE: 3.95 / 4.5
 
 
 
 # 수강 과목
+
+## 수강 중인 과목
+
+* 알고리즘개론
+* 프로그래밍언어
+* 논리회로
+* 소프트웨어실습2 (Linux)
+* 컴퓨터공학세미나
+
+
 
 ## 성적이 A0 및 A+인 과목
 
@@ -41,6 +53,8 @@ permalink: /cv/
 
 #### 기타 교양
 * 스피치와토론 / 영어쓰기 / 기호논리학 / 교양배드민턴 / 교양테니스
+
+
 
 ## 성적이 B+이지만 재미있다고 생각한 과목
 * 인공지능개론
