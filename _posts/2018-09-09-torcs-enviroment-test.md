@@ -103,7 +103,7 @@ $ sudo apt install torcs
 
 # DDPG-Keras-Torcs 로 학습시켜보기
 
-앞서도 말했지만 나는 어떤 분이 이미 만들어 둔 프로젝트를 받아서 사용해 보기 위해 위와 같은 환경을 구축했다. 사용해보려는 코드는 자율주행 강화학습 네트웍을 Deep deterministic policy gradient를 이용한 방법으로 keras로 구현한 코드이다.
+앞서도 말했지만 나는 어떤 분이 이미 만들어 둔 프로젝트를 받아서 사용해 보기 위해 위와 같은 환경을 구축했다. [사용해보려는 코드](https://github.com/yanpanlau/DDPG-Keras-Torcs)는 자율주행 강화학습 네트웍을 Deep deterministic policy gradient를 이용한 방법으로 keras로 구현한 코드이다.
 
 [아까 그 블로그 글](https://yanpanlau.github.io/2016/10/11/Torcs-Keras.html) 쓰신 분이 그 글에 친절하게 사용법을 적어 주셨다. 아까 전에 gym_torcs를 clone한 위치에서 다음 스크립트를 실행하면 된다.
 
@@ -137,7 +137,7 @@ $ sudo apt install xautomation
 
 # 결과
 
-![결과]({{ "/assets/2018-07-08/image.png" | absolute_url }})
+![결과]({{ "/assets/2018-09-09/image.png" | absolute_url }})
 
 학습 코드를 실행시켰는데 게임 창에서 자동차가 보이지 않는 문제가 있었다. ~~해결할 힘이 없다...~~ 주행 중 `F1`을 누르면 키 힌트를 볼 수 있고, `F2` 키가 드라이버 시점 카메라이다. 드라이버 시점으로 보면 자동차가 얼마나 이상하게 가고 있는지 잘 볼 수 있다. ~~그래도 나보다는 운전 잘 하는 것 같다~~ 에피소드는 기본 코드에는 2000번 학습하도록 되어 있다. 오래 걸린다.
 
