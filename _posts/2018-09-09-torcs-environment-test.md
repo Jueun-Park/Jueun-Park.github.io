@@ -105,7 +105,7 @@ $ sudo apt install torcs
 
 앞서도 말했지만 나는 어떤 분이 이미 만들어 둔 프로젝트를 받아서 사용해 보기 위해 위와 같은 환경을 구축했다. [사용해보려는 코드](https://github.com/yanpanlau/DDPG-Keras-Torcs)는 자율주행 강화학습 네트웍을 Deep deterministic policy gradient를 이용한 방법으로 keras로 구현한 코드이다.
 
-[아까 그 블로그 글](https://yanpanlau.github.io/2016/10/11/Torcs-Keras.html) 쓰신 분이 그 글에 친절하게 사용법을 적어 주셨다. 아까 전에 gym_torcs를 clone한 위치에서 다음 스크립트를 실행하면 된다.
+[아까 그 블로그 글](https://yanpanlau.github.io/2016/10/11/Torcs-Keras.html) 쓰신 분이 그 글에 친절하게 사용법을 적어 주셨다. `home` 위치에서 다음 스크립트를 실행하면 된다.
 
 ```sh
 $ git clone https://github.com/yanpanlau/DDPG-Keras-Torcs.git
