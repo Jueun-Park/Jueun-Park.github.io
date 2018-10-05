@@ -26,4 +26,6 @@ plugins:
 
 # Permalinks
 permalink:      /:year-:month-:day/:title
+
 paginate:       5
+paginate_path: "/page/:num"

@@ -1,24 +1,26 @@
 ---
 layout: default
 ---
+<div class="catalogue" id="card-wrapper">
+  {%- if paginator.posts.size > 0 -%}
+    {%- for post in paginator.posts -%}
+      <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+        <div>
+          <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
+          <h1 class="catalogue-title">{{ post.title }}</h1>
+          <div class="catalogue-line"></div>
 
-<div class="catalogue">
-  {% for post in paginator.posts %}
-    <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
-      <div>
-        <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
-        <h1 class="catalogue-title">{{ post.title }}</h1>
-        <div class="catalogue-line"></div>
+          <p>
+            {{ post.content | strip_html | truncatewords: 30 }}
+          </p>
 
-        <p>
-          {{ post.content | strip_html | truncatewords: 30 }}
-        </p>
-
-      </div>
-    </a>
-  {% endfor %}
+        </div>
+      </a>
+    {%- endfor -%}
+  {%- endif -%}
 </div>
 
+<!-- 
 <div class="pagination">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
@@ -29,3 +31,11 @@ layout: default
 
   <span>{{ paginator.page }}</span>
 </div>
+-->
+
+<script src="{{ '/assets/lib/InfiniteScroll.js' }}"></script>
+<script>
+  var postWrapperId = 'card-wrapper';
+  var paginatePath = '/page/';
+  new InfiniteScroll(paginatePath, postWrapperId);
+</script>
