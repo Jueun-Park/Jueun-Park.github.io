@@ -81,6 +81,8 @@ $$MR = 100 \times {\#Trady / (\#Trady + \#Timely)} (\%)$$
 
 평균 miss ratio와 같이 긴 시간을 보는 측정법은 실시간 데이터베이스의 다이나믹한 환경에 적용하기에 적합하지 않다. 따라서 overshoot과 settling time을 다음과 같이 정의한다.
 
+![definition of overshoot and settling time]({{"/assets/2018-10-09/img1.png" | absolute_url}})
+
 #### Overshoot
 
 시간이 지남에 따라 미스 비율이 요동칠 수 있으며, 데이터베이스는 이 미스 비율이 threshold를 넘지 않도록 제어하려고 노력할 것이다. Overshoot은 이 일시적인 상황에서 threshold를 넘은 가장 큰 미스 비율 $V$로 정의된다.
