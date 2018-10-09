@@ -71,7 +71,7 @@ QMF는 데이터베이스 관리자에게 miss ratio와 data freshness를 적절
 
 ### Deadline Miss Ratio
 
-$$MR = 100 \times {\#Trady \over \#Trady + \#Timely} (\%)$$
+$$MR = 100 \times {\#Trady / (\#Trady + \#Timely)} (\%)$$
 
 \#Trady 는 데드라인을 놓친 트랜잭션의 개수, \#Timely는 데드라인을 맞춘 트랜잭션의 개수이다.
 
