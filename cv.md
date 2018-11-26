@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Curiculum Vitae"
+title: "Curriculum Vitae"
 author: "Jueun Park"
 date: 2018-11-26
 permalink: /cv/
