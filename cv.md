@@ -13,10 +13,9 @@ permalink: /cv/
 # 기본 정보
 ### 학부
 
-성균관대학교 시스템경영공학과 / 컴퓨터공학과 (복수전공, 재학 중)
+성균관대학교 시스템경영공학과 / 컴퓨터공학과 (복수전공, 9학기 재학 중)
 
 * System Management Engineering / Computer Science and Engineering (double major)
-* 2019.08 졸업 예정
 
 ##### 현재까지의 GPA: 3.62 / 4.5
 
