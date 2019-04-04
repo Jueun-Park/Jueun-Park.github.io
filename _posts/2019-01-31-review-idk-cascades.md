@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Paper Reading [IDK Cascades]"
-publish: false
+publish: True
 ---
 
 머신 러닝 모델 여러 개를 결합하는 어떤 방식을 소개하는 페이퍼이다. **IDK는 *I don't know* 의 약자**라고 한다.
