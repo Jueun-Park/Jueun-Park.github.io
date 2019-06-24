@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Paper Reading [Clipper]"
-published: True
+published: true
 ---
 
 Clipper는 예측 모델 서빙 시스템이다. 단순히 하나의 머신 러닝 모델을 서비스하는 게 아니라, 더 나은 결과를 내놓기 위해 여러 가지 머신 러닝 모델을 동시에 사용한다. 그러면서 동시에 레이턴시 *latency*[^1] 도 줄여 실시간 시스템으로 사용할 수 있게 하고자 한다.

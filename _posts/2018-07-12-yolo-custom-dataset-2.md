@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 커스텀 데이터 셋으로 Yolo 써 보기 2
-published: True
+published: true
 ---
 
 

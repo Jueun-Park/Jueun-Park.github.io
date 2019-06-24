@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ubuntu 18.04에 gym_torcs(자율주행 강화학습 환경) 설치하고 테스트해보기
-published: True
+published: true
 ---
 
 나는 어제 밤에 메일로 다음의 흥미로운 블로그 글 링크를 받았다. [[Using Keras and Deep Deterministic Policy Gradient to play TORCS](https://yanpanlau.github.io/2016/10/11/Torcs-Keras.html)] 설명이 친절하다. 이론을 이해하기 전에 일단 실행해보고 싶다는 생각이 들어서 우분투를 새로 깔았다. 컴퓨터는 동아리 컴퓨터~~헤븐컴~~을 사용했다.

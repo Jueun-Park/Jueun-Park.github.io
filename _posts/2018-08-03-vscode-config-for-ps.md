@@ -1,7 +1,7 @@
 ---
 layout: post
 title: C언어 문제풀이를 위한 VS Code 설정 기록
-published: True
+published: true
 ---
 
 

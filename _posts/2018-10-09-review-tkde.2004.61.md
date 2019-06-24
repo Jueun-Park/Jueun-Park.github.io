@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Paper Reading: [Managing Deadline Miss Ratio and Sensor Data Freshness in Real-Time databases]"
-published: True
+published: true
 ---
 
 올해 5월 자율차 대회를 끝내고 아쉬운 점 중에서 '데이터를 실시간으로 더 잘 다룰 수 있게 프로그램 구조를 짰으면'하는 생각이 있었다([관련 글]({{"/2018-07-09/requirement_and_structure_of_autonomous_driving_system"|absolute_url}})). 최근에 나는 이런 고민에 대한 해결의 한 방법으로 관련 분야가 Real-Time Database라는 이름으로 연구되어왔다는 조언을 들었고, 다음 논문을 훑어보았다. [Kang, K-D., Sang Hyuk Son, and John A. Stankovic. "Managing deadline miss ratio and sensor data freshness in real-time databases." ](https://ieeexplore.ieee.org/abstract/document/1324629)
