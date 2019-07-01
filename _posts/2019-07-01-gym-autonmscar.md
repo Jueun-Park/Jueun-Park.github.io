@@ -56,7 +56,7 @@ gym-autonmscar/
 
 ### 4. `AutonomousCarEnv` 구현
 
-그리고 강화학습 환경을 구현했다. 처음엔 `AutonomousCarEnv` 가 `Brain` class 를 상속받게 해서 구현할 수도 있겠다고 생각했었는데, 그보다는 그냥 Env를 Brain과 비슷한 구조로 만들기만 해도 괜찮겠다는 판단을 내렸다. 본래 게임에 있던 `main.py` 코드를 참고해서 `AutonomousCarEnv` 의 `__init__()` 을 구현했다. 이어서 `step()`, `reset()`, `render()` 메서드를 구현했다. 이 때는 비슷하게 `pygame` 을 이용해 만든 게임을 `gym.Env` 로 만든 프로젝트인 [`gym-worm`](https://github.com/kwk2696/gym-worm) 을 주로 참고했다.
+그리고 강화학습 환경을 구현했다. 처음엔 `AutonomousCarEnv` 가 `Brain` class 를 상속받게 해서 구현할 수도 있겠다고 생각했었는데, 그보다는 그냥 Env를 Brain과 비슷한 구조로 만들기만 해도 괜찮겠다는 판단을 내렸다. 본래 게임에 있던 `main.py` 코드를 참고해서 `AutonomousCarEnv` 의 `__init__()` 을 구현했다. 이어서 `step()`, `reset()`, `render()` 메서드를 구현했다. 이 때는 비슷하게 `pygame` 을 이용해 만든 게임을 `gym.Env` 로 만든 프로젝트인 [gym-worm](https://github.com/kwk2696/gym-worm) 을 주로 참고했다.
 
 ### 5. 테스트와 디버깅
 
@@ -76,12 +76,12 @@ gym-autonmscar/
 
 학습 테스트를 돌려 가면서 agent 에게 줄 reward 를 *적당히* 정했다. `tensorboard` 를 이용해서 agent 가 timestep 에 따라 reward 를 받는 그래프도 확인해 보았다.
 
-### 6. 리드미 작성
+### 6. README 작성
 
 처음으로 프로젝트 리드미를 영어로 써 봤다.
 
 ## 결론과 소감
 
-어려웠다. 학습이 잘 되도록 agent 의 파라미터를 바꿔 가며 여러 번 실험해보는 건 이 환경에서는 안 해 보았다. (아마 나중에 해 보게 될 것이다...)
+어려웠다. 학습이 잘 되도록 agent 의 파라미터를 바꿔 가며 여러 번 실험해보는 건 이 환경에서는 안 해 보았다. (아마 나중에 다른 환경에서라도 해 보게 될 것이다...)
 
 직접 만들어 보니 강화학습 환경의 구조를 조금 알 수 있었다.
