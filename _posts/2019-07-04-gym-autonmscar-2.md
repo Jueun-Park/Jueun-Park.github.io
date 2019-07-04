@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "직접 만든 gym-env 에서 강화학습 돌려보기"
-published: false
+published: true
 ---
 
-[지난 글](https://jueun-park.github.io/2019-07-01/gym-autonmscar)에서 소개했던 대로 직접 만든 강화학습 환경이 잘 만들어졌는지 확인하기 위해서 이미 만들어진 RL 에이전트를 그 환경 위에서 학습시켜 보았다. 이 글은 그 과정과 결과를 간략히 설명하고 있다. DQN, DDPG로 각각 학습시킨 모델의 행동 모습을 gif 애니메이션으로 저장했다. 또한, discrete action space 로 구현한 env 를 어떻게 continuous action space 를 가지는 환경으로 추가로 구현할 수 있었는지를 기록해 두었다.
+[지난 글](https://jueun-park.github.io/2019-07-01/gym-autonmscar)에서 기록했던 대로 직접 만든 강화학습 환경이 잘 만들어졌는지 확인하기 위해서 이미 만들어진 RL 에이전트를 그 환경 위에서 학습시켜 보았다. 이 글은 그 과정과 결과를 간략히 설명하고 있다. DQN, DDPG로 각각 학습시킨 모델의 행동 모습을 gif 애니메이션으로 저장했다. 또한, discrete action space 로 구현한 env 를 어떻게 continuous action space 를 가지는 환경으로 추가로 구현할 수 있었는지를 기록해 두었다.
 
 * [Project repository](https://github.com/Jueun-Park/gym-autonmscar)
 
@@ -30,6 +30,8 @@ Callback 함수를 구현해서 최근의 평균 리워드를 매번 구해서 �
 
 ![544000](https://github.com/Jueun-Park/gym-autonmscar/blob/master/train/dqn-result-gif/atnms-dqn_544000.gif)
 
+벽에 부딪히지 않으려고 가만히 멈춰 버리는 모습이 참 안타깝다.
+
 다음 날 아침에 보니 reward 그래프가 음수 영역에서 계속 아래로 내려가고만 있었다. 더 이상 올라가지 않을 것 같아서 학습을 중지시켰다.
 
 ## DDPG
@@ -48,7 +50,7 @@ DDPG를 사용하려면 `spaces.Box` 를 이용해서 continuous action space를
 
 우선 나는 어떻게 discrete action space 를 가진 env에 동시에 continuous action space 를 가지는 것을 추가하여 작성할 수 있는지를 몰랐다. `stable-baselines` 의 예제 코드에서 DDPG 를 쓰는 코드가 환경을 무엇을 사용하고 있는지 보았더니, `LunarLanderContinuous-v2` 를 예시로 보여주고 있었다. 그래서 [그 코드](https://github.com/openai/gym/blob/master/gym/envs/box2d/lunar_lander.py)를 읽어보았다. 참고하여 다음과 같이 상속을 해 줘서 쉽게 구현할 수 있었다.
 
-##### `autonmscar/envs/autonmscar_env.py`
+##### [`gym_autonmscar/envs/autonmscar_env.py`](https://github.com/Jueun-Park/gym-autonmscar/blob/master/gym_autonmscar/envs/autonmscar_env.py)
 
 ```python
 class AutonomousCarEnv(gym.Env):
@@ -66,7 +68,7 @@ class AutonomousCarEnvContinuous(AutonomousCarEnv):
 
 그리고 `gym_autonmscar/__init__.py`에 다음과 같은 줄을 추가해서 작성했다. `gym.envs` 의 레지스터에 `id`를 등록하는 코드이다.
 
-##### `gym_autonmscar/__init__.py`
+##### [`gym_autonmscar/__init__.py`](https://github.com/Jueun-Park/gym-autonmscar/blob/master/gym_autonmscar/__init__.py)
 
 ```python
 from gym.envs.registration import register
@@ -93,7 +95,7 @@ env = gym.make('autonmscarContinuous-v0')
 AssertionError: Error: the action space low and high must be symmetric
 ```
 
-이렇다고 했다. 생각해 보니 이렇게 하면 다 더해서 1이 되지도 않을 것 같다. 그래서 다음과 같이 [-1, 1] 중에 고를 수 있도록 action space 를 짠 다음에
+이렇다고 했다. 생각해 보니 그렇게 하면 다 더해서 1이 되지도 않을 것 같다. 그래서 다음과 같이 [-1, 1] 중에 고를 수 있도록 action space 를 짠 다음에
 
 ```python
 from gym import spaces
@@ -109,9 +111,9 @@ if self.continuous:
     action = int(np.random.choice(4, 1, p=action))
 ```
 
-사실 지금 생각해보면 이 액션 모델은 별로 현실적이지도 않고 좋은 디자인이 아닌 것 같다. 예를 들어 `LunarLanderContinuous-v2` 는 로켓 엔진의 출력 정도를 연속된 실수 값으로 선택할 수 있게 하지, 고정된 출력 값을 선택할 수 있게 하지는 않는다.
+사실 지금 생각해보면 이 액션 모델은 별로 현실적이지도 않고 좋은 디자인이 아닌 것 같다. 예를 들어 `LunarLanderContinuous-v2` 는 로켓 엔진의 출력 정도를 연속된 실수 값으로 선택할 수 있게 하지, 고정된 출력 값을 선택하게 하지는 않는다.
 
-##### `lunar_lander.py` 의 action space
+##### [`lunar_lander.py`](https://github.com/openai/gym/blob/master/gym/envs/box2d/lunar_lander.py) 의 action space
 
 ```python
 if self.continuous:
@@ -123,7 +125,6 @@ else:
     # Nop, fire left engine, main engine, right engine
     self.action_space = spaces.Discrete(4)
 ```
-[lunar lander original code](https://github.com/openai/gym/blob/master/gym/envs/box2d/lunar_lander.py)
 
 ### DDPG가 게임 하는 모습
 
@@ -144,6 +145,10 @@ img = env.render(mode='rgb_array')
 ```
 
 대충 이런 식으로 사용하면 된다.
+
+## README 수정하기
+
+구현한 내용이 바뀌어서 그 설명을 리드미에 추가했다.
 
 ## 생각
 
