@@ -16,5 +16,3 @@ permalink: /about/
 [github](https://github.com/Jueun-Park)
 
 [facebook](https://www.facebook.com/jueun.park08)
-
-[curriculum vitae]({{ "/cv/" | absolute_url }})
