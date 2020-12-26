@@ -1,38 +1,54 @@
 ---
 layout: post
-title: "Curriculum Vitae"
-author: "Jueun Park"
-date: 2019-07-01
+title: "CV"
+author: "Ju-eun Park"
+date: 2020-12-27
 permalink: /cv/
 ---
 
-안녕하세요, 박주은입니다. 시스템, 특히 소프트웨어 시스템을 설계하고 개발하는 일을 좋아합니다. 어떤 시스템이 요구로 하는 점들을 분석하고 그것을 달성하기 위해 필요한 내용들을 공부해 적용하는 일이 재미있습니다. 제가 흥미를 갖는 시스템은 크게는 컴퓨터 소프트웨어, 작게는 팀 운영 방식이나 일의 처리 프로세스 등을 포함합니다.
+## Educations
 
-## 기본 정보
+[2020-09 — ] SungKyunKwan University
 
-### 학부
+* Software
+* _Master Student_
 
-성균관대학교 시스템경영공학과 / 컴퓨터공학과 (복수전공)
+[2015-03 — 2019-08] SungKyunKwan University
 
 * System Management Engineering / Computer Science and Engineering (double major)
+* _Bachelor of System Management Engineering_
+* _Bachelor of Computer Science and Engineering_
 
-##### 현재까지의 GPA: 3.62 / 4.5
+## Research Interests
 
-​**SME: 3.64** / 4.5
+* Cyber-Physical Systems
+* Reinforcement Learning
 
-​**CSE: 4.07** / 4.5
+## Publications and Conferences
+
+\-
+
+## Awards and Honors
+
+* 대학원우수장학생 (Master course, Graduate Excellence Scholarship) [2019-09 — ]
+
+## Languages
+
+First language Korean, good in English, and good in Python
+
+---
 
 ## Projects
 
-* **2018 판교 자율주행 모터쇼 대학생 자동차 융합기술 경진대회 자율주행 부문** (PAMS 2018, Pangyo Autonomous Motor Show, 경기도) [2018.10 - 2018.11]
+* **2018 판교 자율주행 모터쇼 대학생 자동차 융합기술 경진대회 자율주행 부문** (PAMS 2018, Pangyo Autonomous Motor Show, 경기도) [2018-10 — 2018-11]
   * 팀원, 전체 시스템 구조 설계 및 구현, 모니터링 시스템 개발 (Python)
   * [시스템 구조 설명](https://jueun-park.github.io/2018-11-25/thinkingo-system-architecture)
   * [Project Repository](https://github.com/HongBeenKim/pams-skku)
-* *자율주행부문 장려상* **2018 국제대학생 창작자동차 경진대회** (2018 International Student Car Competition, 교통안전공단 자동차안전연구원) [2017.12 - 2018.05]
+* *자율주행부문 장려상* **2018 국제대학생 창작자동차 경진대회** (2018 International Student Car Competition, 교통안전공단 자동차안전연구원) [2017-12 — 2018-05]
   * 팀장, 자율주행 프로그램 개발 (Python)
   * [대회 후기]({{ "/2018-07-08/postscript-autonomous-car.html" | absolute_url }})
   * [Project Repository](https://github.com/Jueun-Park/HEVEN_AutonomousCar_2018)
-* *최종 성과 발표회 동상* **실전문제 해결형 S-HERO 공학인재 양성사업** [2017 여름 - 2017.12.08]
+* *최종 성과 발표회 동상* **실전문제 해결형 S-HERO 공학인재 양성사업** [2017 여름 — 2017-12-08]
   * 메이커 스페이스 자동화 시스템 구축 프로젝트 (사용자 예약 웹 서버 및 페이지 구축 / 원격 공간 잠금 관리 IoT 연동)
   * 공간 잠금 관리 시스템 개발 및 프로젝트 발표
 * *디자인 부문 금상* **2017 대학생 자작자동차대회** (KSAE Baja/Formula/EV, 한국자동차공학회) [2017 여름]
@@ -48,20 +64,16 @@ permalink: /cv/
 
 ### 동아리 및 단체
 
-* 자작자동차 동아리 HEVEN 임원 (자율주행차 팀장) [2017.09 - 2018.08]
-* 성균관대학교 창업지원단 대학생 서포터즈 [2016.09 - 2018.01]
-* 러닝팩토리 (교내 메이커 스페이스) 운영진 [2015.12 - 2017.11]
-* 배드민턴 동아리 SBA 운영진 1기 홍보부장 [2015.12 - 2016.12]
+* 자작자동차 동아리 HEVEN 임원 (자율주행차 팀장) [2017-09 — 2018-08]
+* 성균관대학교 창업지원단 대학생 서포터즈 [2016-09 — 2018-01]
+* 러닝팩토리 (교내 메이커 스페이스) 운영진 [2015-12 — 2017-11]
+* 배드민턴 동아리 SBA 운영진 1기 홍보부장 [2015-12 — 2016-12]
 
 ### 봉사활동
 
 * 성균튜터링 튜터 (Python Tutor) [2017 2학기]
-* 성균 C-School 학습튜터링(Python Tutor) [2017 2학기]
-* 창의융합 S/W Car Racing 프로그램 대학생 멘토링 [2016.01]
+* 성균 C-School 학습튜터링 (Python Tutor) [2017 2학기]
+* 창의융합 S/W Car Racing 프로그램 대학생 멘토링 [2016-01]
   * 중고등학생 대상, 3D 프린터와 아두이노를 이용한 사륜구동 RC카 제작 프로그램 멘토 활동
 * 대학생과 함께하는 STEAM (한국과학창의재단) [2015 여름]
   * 초등생 대상 공학교육 프로그램 개발 및 멘토링, 메이키메이키(아두이노 기반)를 이용한 게임 컨트롤러 만들기/우드락과 주변 재료를 이용한 공 오래 굴리기
-
-## 외국어
-
-* OPIc IM2 (10-Sep-2017, English Speaking)
