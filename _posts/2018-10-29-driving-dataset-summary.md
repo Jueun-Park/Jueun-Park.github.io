@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: "Driving Dataset Summary"
-published: true
+published: false
 ---
 
 이 글은 자율주행 기술 관련 오픈소스 데이터셋의 목적과 구조를 정리한 글입니다. 단순히 검색을 통해 알 수 있는 정보들을 제가 나중에 한 곳에서 보기 쉽게 정리한 것입니다. 대표적으로 Berkeley DeepDrive 와 Baidu Apollo 두 군데에서 제공하는 데이터셋들 중 제가 사용해 볼 가능성이 있는 것들을 위주로 정리했습니다.
