@@ -1,4 +1,8 @@
-# Imitation 라이브러리의 Behavior Cloning 써보기
+---
+layout: post
+title: "Imitation 라이브러리의 Behavior Cloning 써보기"
+published: true
+---
 
 강화학습의 behavior cloning (BC) 을 해봐야 할 필요가 생겨서 파이썬 `stable baselines3` (SB3) 기반의 imitation learning 라이브러리 `imitation` 을 써 보았다.
 그런데 `imitation` 의 데이터셋과 내가 수집해 둔 데이터셋의 인터페이스가 달라서 맞춰주는 일을 해야 했다.
