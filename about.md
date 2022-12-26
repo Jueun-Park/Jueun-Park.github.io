@@ -10,7 +10,3 @@ permalink: /about/
 ## 관련 링크
 
 [github](https://github.com/Jueun-Park)
-
-[facebook](https://www.facebook.com/jueun.park08)
-
-[cv](https://jueun-park.github.io/cv/)
